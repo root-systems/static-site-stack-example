@@ -1,5 +1,7 @@
 ---
 title: "About Us"
+path: '/about-us'
+template: 'about'
 ---
 
 # About

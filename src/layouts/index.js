@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
 const Layout = ({ children, data }) => {
   const { title } = data.site.siteMetadata
+  
   return (
     <div>
       <Helmet
