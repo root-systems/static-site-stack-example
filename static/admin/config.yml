@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: root-systems/static-site-stack-example
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: page
+    label: Page
+    folder: pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: "static-pages"
+    label: "Static Pages"
+    files:
+      - label: "About Us"
+        name: "about"
+        file: "src/pages/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+      - label: "Contact Us"
+        name: "contact"
+        file: "src/pages/contact.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Details, name: details, widget: markdown}
