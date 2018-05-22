@@ -13,6 +13,7 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
+      - { name: template, label: Template }
       - { name: body, label: Body, widget: markdown }
   - name: "static-pages"
     label: "Static Pages"
